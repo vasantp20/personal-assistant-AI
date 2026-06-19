@@ -20,11 +20,6 @@ app.get('/health', (req, res) => {
 // API routes
 const BASE = '/api/v1';
 app.use(`${BASE}/auth`, require('./routes/auth.routes'));
-// app.use(`${BASE}/transactions`, auth, require('./routes/transactions.routes'));
-// app.use(`${BASE}/budgets`, auth, require('./routes/budgets.routes'));
-// app.use(`${BASE}/recurring`, auth, require('./routes/recurring.routes'));
-// app.use(`${BASE}/tags`, auth, require('./routes/tags.routes'));
-// app.use(`${BASE}/images`, auth, require('./routes/images.routes'));
 app.use(`${BASE}/agent`,auth, require('./routes/agent.routes'));
 
 // 404

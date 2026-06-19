@@ -1,7 +1,7 @@
 
 import './App.css';
 import AdminLoginComponent from './components/admin/AuthComponents/AdminLoginComponent';
-
+import RegisterComponent from './components/admin/AuthComponents/RegisterComponent';
 import AgenticDashboard from './components/Agentic/Dashboard'
 import ManageAuth from './services/admin/ManageAuth';
 import {
@@ -55,12 +55,13 @@ class App extends React.Component {
       <div>
         <BrowserRouter>
           <Routes>
-            <Route exact path='' element={< HomePage />}></Route>
-            <Route exact path='/admin/login' element={< AdminLoginComponent />}></Route>
+            
+            <Route exact path='' element={< AdminLoginComponent />}></Route>
+            <Route exact path='/register' element={< RegisterComponent />}></Route>
             
             {/* Private Admin Routes */}
             <Route element={<PrivateRoutes />}>
-              <Route exact path='/admin/dashboard' element={< AgenticDashboard />}></Route>
+              <Route exact path='/dashboard' element={< AgenticDashboard />}></Route>
             </Route>
           </Routes>
         </BrowserRouter>

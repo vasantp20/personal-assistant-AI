@@ -72,7 +72,7 @@ class AdminLoginComponent extends React.Component {
     }
     if (this.state.redirectDashboard) {
       return <Navigate to={{
-        pathname: '/admin/dashboard'
+        pathname: '/dashboard'
       }} />
     }
 

@@ -19,6 +19,19 @@ export const AuthService = {
         return fetch(AppConfig.baseUrl + "/api/v1/auth/login", requestHeader).then(handleResponse)
     }
 
+    function register(name, email,password) {
+        const requestHeader = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                "name": name,
+                "email": email,
+                "password": password
+            })
+        }
+        return fetch(AppConfig.baseUrl + "/api/v1/auth/register", requestHeader).then(handleResponse)
+    }
+
     function adminsignup(mobileNumber,password, name, pic) {
         const requestHeader = {
             method: 'POST',
